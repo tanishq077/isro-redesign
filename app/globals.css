@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm cream / ivory palette from reference */
+  --bg-cream: #f3e9d5;
+  --bg-cream-card: #ece2cd;
+  --bg-cream-light: #f7efe1;
+  --bg-cream-hover: #e5dac4;
+
+  /* Dark charcoal / near-black sections from reference */
+  --bg-charcoal: #151512;
+  --bg-charcoal-card: #1e1d19;
+  --bg-charcoal-light: #282722;
+  --bg-charcoal-hover: #22211c;
+
+  /* Burnt ISRO terracotta / orange accent from reference */
+  --accent-orange: #c95a20;
+  --accent-orange-hover: #b34d16;
+  --accent-orange-light: #df6e35;
+  --accent-orange-glow: rgba(201, 90, 32, 0.25);
+
+  /* Hairline border colors */
+  --border-cream: #d8cca8;
+  --border-cream-strong: #c2b48e;
+  --border-charcoal: #2e2d27;
+  --border-charcoal-strong: #424038;
+
+  /* Text colors */
+  --text-dark: #151512;
+  --text-dark-muted: #5c584e;
+  --text-light: #f3e9d5;
+  --text-light-muted: #a8a08e;
+}
+
+@theme {
+  --color-cream: #f3e9d5;
+  --color-cream-card: #ece2cd;
+  --color-cream-light: #f7efe1;
+  --color-charcoal: #151512;
+  --color-charcoal-card: #1e1d19;
+  --color-charcoal-light: #282722;
+  --color-orange: #c95a20;
+  --color-orange-hover: #b34d16;
+  --color-border-cream: #d8cca8;
+  --color-border-charcoal: #2e2d27;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #f3e9d5;
+  color: #151512;
+}
+
+body {
+  background-color: #f3e9d5;
+  color: #151512;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #c95a20;
+  color: #ffffff;
+}
+
+/* Subtle Technical Hairline Borders */
+.border-cream-subtle {
+  border-color: #d8cca8;
+}
+
+.border-charcoal-subtle {
+  border-color: #2e2d27;
+}
+
+/* Reference-Style Concentric Orbital Rings */
+.orbital-ring {
+  border-radius: 9999px;
+  border: 1px solid rgba(201, 90, 32, 0.35);
+  pointer-events: none;
+}
+
+.orbital-ring-charcoal {
+  border-radius: 9999px;
+  border: 1px solid rgba(243, 233, 213, 0.15);
+  pointer-events: none;
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3e9d5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c95a20;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b34d16;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid #c95a20;
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
